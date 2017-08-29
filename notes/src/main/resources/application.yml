@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      database: notes
+  jpa:
+    hibernate:
+      ddl-auto: update
+security:
+  basic:
+    enabled: false

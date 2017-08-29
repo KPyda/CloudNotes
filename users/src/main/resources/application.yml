@@ -1,0 +1,24 @@
+spring:
+  data:
+    mongodb:
+      database: users
+  jpa:
+    hibernate:
+      ddl-auto: update
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbit
+    password: rabbit
+  cloud:
+    stream:
+      bindings:
+        usersCreated:
+          group: usersService
+          contentType: application/json
+          destination: usersCreatedEvent
+        usersCreatedEvent:
+          group: usersService
+          contentType: application/json
+server:
+  port: 8181

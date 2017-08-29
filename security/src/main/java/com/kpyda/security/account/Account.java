@@ -15,9 +15,12 @@ class Account {
     private String password;
     private Boolean active;
 
-    Account(String name, String password, Boolean active) {
+    private String globalUserId;
+
+    Account(String name, String password, Boolean active, String globalUserId) {
         this.username = name;
         this.password = password;
         this.active = active;
+        this.globalUserId = globalUserId;
     }
 }
