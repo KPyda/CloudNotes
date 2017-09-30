@@ -1,0 +1,17 @@
+<div>
+  <h4>
+    <label for="title">Title</label>
+    <textarea class="form-control" rows="1" id="title">{{note?.title}}</textarea>
+  </h4>
+  <hr/>
+  <div class="form-group">
+    <label for="content">Note</label>
+    <textarea class="form-control" rows="5" id="content">{{note?.content}}</textarea>
+  </div>
+  <div>
+    <button type="button" class="btn btn-success" style="float: right">Save</button>
+    <a routerLink="/notes">
+      <button type="button" class="btn btn-warning" style="float: right">Cancel</button>
+    </a>
+  </div>
+</div>

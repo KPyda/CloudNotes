@@ -1,0 +1,13 @@
+<div>
+  <h4>Your saved notes
+    <a href="new-note">
+      <button type="button" class="btn btn-info" style="float: right">New note</button>
+    </a>
+  </h4>
+  <hr/>
+  <div class="row">
+    <div *ngFor="let note of notes" class="col-md-6">
+      <app-note-list-details (click)="handleThumbnailClick(note.id)" [note]="note"></app-note-list-details>
+    </div>
+  </div>
+</div>
